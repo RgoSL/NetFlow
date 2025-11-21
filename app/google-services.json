@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "323361232686",
+    "project_id": "netflow-f0de0",
+    "storage_bucket": "netflow-f0de0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:323361232686:android:943fdf002f1de2007d0cbf",
+        "android_client_info": {
+          "package_name": "com.example.netflow"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJWipuDU7da-mq-i27cWxaEH7FG-ahqs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
