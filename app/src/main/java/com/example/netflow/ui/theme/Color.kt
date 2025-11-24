@@ -2,10 +2,11 @@ package com.example.netflow.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple80 = Color(0xFFD0BCFF)
-val PurpleGrey80 = Color(0xFFCCC2DC)
-val Pink80 = Color(0xFFEFB8C8)
+// Classe Das Variáveis de Cor do App
 
-val Purple40 = Color(0xFF6650a4)
-val PurpleGrey40 = Color(0xFF625b71)
-val Pink40 = Color(0xFF7D5260)
+val MintGreen = Color(0xFFA8E6CF)
+val PastelBlue = Color(0xFFA3D9F3)
+val SoftCoral = Color(0xFFFF6F81) // Para os Botões de Ação
+val OffWhite = Color(0xFFF1F4F9) // Para o Background de Tudo
+val LightGray = Color(0xFF6B6B6B) // Para os Textos e ícones
+val PaleLavender = Color(0xFFB8A0D1) // Para os Detalhes
