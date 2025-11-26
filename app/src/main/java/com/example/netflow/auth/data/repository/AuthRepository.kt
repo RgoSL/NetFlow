@@ -35,3 +35,14 @@ class AuthRepository {
     /* Criação de um Método Para Incrementar um ID de Usuário Utilizando um Objeto do Firebase */
     fun currentUserId(): String? = auth.currentUser?.uid
 }
+
+    fun createAccount(
+    email: String,
+    password: String,
+    onResult: (Boolean, String?) -> Unit
+    ) {
+    FirebaseAuth.getInstance()
+        .createUserWithEmailAndPassword(email, password)
+        .addOnSuccessListener { onResult(true, null) }
+        .addOnFailureListener { e -> onResult(false, e.message) }
+    }
