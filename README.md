@@ -1,5 +1,5 @@
 <div align = "center">
-<img src = "" alt = "Logo do Aplicativo" width = "250px">
+<img src = "https://github.com/RgoSL/NetFlow/blob/main/app/src/main/res/drawable/logo_png.png" alt = "Logo do Aplicativo" width = "200px">
 </div>
 
 # NetFlow - Diário de Bem-Estar 🧘🏻‍♂️
@@ -77,5 +77,5 @@ O projeto foi desenvolvido como parte da disciplina **Programação de Aplicativ
 ---
 
 <div align = "center">
-<img src = "" alt = "Logo do Aplicativo" width = "250px">
+<img src = "https://github.com/RgoSL/NetFlow/blob/main/app/src/main/res/drawable/logo_png.png" alt = "Logo do Aplicativo" width = "200px">
 </div>
