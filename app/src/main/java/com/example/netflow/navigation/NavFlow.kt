@@ -14,6 +14,7 @@ import com.example.netflow.ui.screens.Stats
 import com.example.netflow.viewModel.AuthViewModel
 import com.example.netflow.viewModel.HabitViewModel
 import androidx.compose.runtime.collectAsState
+import com.example.netflow.ui.screens.RegisterScreen
 
 @Composable
 fun NavFlow() {
@@ -35,7 +36,11 @@ fun NavFlow() {
                     navController.navigate("habitsList") {
                         popUpTo("login") { inclusive = true }
                     }
+                },
+                onGoToRegister = {
+                    navController.navigate("register")
                 }
+
             )
         }
 
@@ -79,6 +84,13 @@ fun NavFlow() {
 
         composable("stats") {
             Stats(habits = habitViewModel.habits.collectAsState().value)
+        }
+
+        composable("register") {
+            RegisterScreen(
+                onRegisterSuccess = { navController.navigate("login") },
+                onBackToLogin = { navController.popBackStack() }
+            )
         }
     }
 }
