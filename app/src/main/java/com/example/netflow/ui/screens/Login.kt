@@ -11,6 +11,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -29,12 +30,16 @@ import com.example.netflow.ui.theme.SoftCoral
 import com.example.netflow.viewModel.AuthViewModel
 
 @Composable
-fun LoginScreen(viewModel: AuthViewModel, onLoginSuccess: () -> Unit) {
+fun LoginScreen(
+    viewModel: AuthViewModel,
+    onLoginSuccess: () -> Unit,
+    onGoToRegister: () -> Unit
+) {
 
     val context = LocalContext.current
     val error = viewModel.errorMessage
 
-    Column (
+    Column(
         modifier = Modifier
             .fillMaxSize()
             .background(OffWhite)
@@ -43,7 +48,8 @@ fun LoginScreen(viewModel: AuthViewModel, onLoginSuccess: () -> Unit) {
     ) {
 
         Text(
-            "NetFlow", fontSize = 32.sp,
+            "NetFlow",
+            fontSize = 32.sp,
             fontWeight = FontWeight.Bold,
             color = PastelBlue
         )
@@ -55,13 +61,13 @@ fun LoginScreen(viewModel: AuthViewModel, onLoginSuccess: () -> Unit) {
 
         OutlinedTextField(
             value = email,
-            onValueChange = {email = it },
+            onValueChange = { email = it },
             label = { Text("Email") }
         )
 
         OutlinedTextField(
             value = password,
-            onValueChange = {password = it },
+            onValueChange = { password = it },
             label = { Text("Senha") },
             visualTransformation = PasswordVisualTransformation()
         )
@@ -75,6 +81,10 @@ fun LoginScreen(viewModel: AuthViewModel, onLoginSuccess: () -> Unit) {
             colors = ButtonDefaults.buttonColors(SoftCoral)
         ) {
             Text("Entrar")
+        }
+
+        TextButton(onClick = onGoToRegister) {
+            Text("Criar nova conta")
         }
 
         if (error != null) {
